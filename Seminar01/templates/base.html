@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <title>Task8 /{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+
+{% block menu %}
+
+<!-- Вариант однострочного меню (из семинара) -->
+<!--<nav>-->
+<!--    <a href="{{ url_for('index') }}">Главная</a>-->
+<!--    <a href="{{ url_for('about') }}">О нас</a>-->
+<!--    <a href="{{ url_for('contacts') }}">Контакты</a>-->
+<!--</nav>-->
+
+<!-- Боковое меню - начало <ul>=<неупорядоченный список> -->
+<ul class="main_menu">
+    <li><a href="/">Главная</a></li>
+    <li><a href="/students">Студенты</a></li>
+    <li><a href="/about">О нас</a></li>
+    <li><a href="/contacts">Контакты</a></li>
+</ul>
+<!-- Боковое меню - окончание <ul>=<unordered list> -->
+{% endblock %}
+
+{% block content %}
+<p>base.html block content</p>
+{% endblock %}
+</body>
+
+{% block footer %}
+<footer>
+    <hr>
+    <div id="footer-text">
+        <p class="alignleft">Task 8</p>
+        <p class="alignright">Все права проданы &copy;</p>
+    </div>
+</footer>
+{% endblock %}
+
+
+</html>

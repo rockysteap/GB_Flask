@@ -1,0 +1,27 @@
+/* внешние границы таблицы серого цвета толщиной 1px */
+/* цвет шрифта общий для всей таблицы */
+
+body {
+   background-color: #EEEEEE;
+}
+
+table {
+   border: 1px solid grey;
+   width: 600px;
+   color: #2E4053;
+   background: #F6FAFE;
+}
+/* размер и цвет шрифта для заголовка таблицы */
+caption {
+   font-weight: bold;
+   font-size: 2em;
+   padding: 10px;
+}
+/* границы ячеек первого ряда таблицы */
+th {
+    border: 1px solid grey;
+}
+/* границы ячеек тела таблицы */
+td {
+    border: 1px solid grey;
+}

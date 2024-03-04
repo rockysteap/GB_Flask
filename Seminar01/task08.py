@@ -7,13 +7,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-menu = [
-    'Главная страница',
-    'О нас',
-    'Контакты',
-]
-
-
 @app.route('/')
 def index():
     return render_template('index.html')

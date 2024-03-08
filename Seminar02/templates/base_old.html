@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Seminar02 / {% block title %}{{title}}{% endblock %}</title>
+</head>
+<body>
+
+    {% set counter = 1 %}
+    {% for dict in data[1:5] %}
+        {% set counter = counter + 1 %}
+            <p>{{dict}}</p>
+        <div class>
+            <h2>{{dict.name}}</h2>
+            <p>{{dict.desc}}</p>
+            {% block url %}
+                <a href="{{ url_for('task04') }}">Нажми меня</a>
+            {% endblock %}
+        </div>
+        {% block task %}
+        {% endblock %}
+    {% endfor %}
+
+    {% for dict in data[1:5] %}
+        <p>task{{ '%02d' % loop.index}}.html</p>
+        <p></p>
+        <div class>
+            <h2>{{dict.name}}</h2>
+            <p>{{dict.desc}}</p>
+            {% block url %}
+                {% include 'task{{ '%02d' % loop.index}}.html' %}
+                    <a href="{{ url_for('task{{ '%02d' % loop.index}}') }}">Нажми меня</a>
+                {% endblock %}
+            {% endblock %}
+        </div>
+            {% block task %}
+            {% endblock %}
+    {% endfor %}
+
+</body>
+</html>

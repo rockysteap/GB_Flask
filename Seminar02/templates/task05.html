@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block url5 %}
+<a href="{{ url_for('index') }}">Нажми меня</a>
+{% endblock %}
+
+{% block task5 %}
+    <form method="post">
+        <fieldset>
+            <legend>Введите два числа и, выбрав операцию, получите результат</legend>
+
+        <input type="text" name="num1" step="0.0000000001" placeholder="число 1:">
+        <input type="number" name="num2" step="0.0000000001" placeholder="число 2:">
+
+        <input checked="checked" type="radio" id="operation_add" name="operation" value="+">
+        <label class="task5_label" for="operation_add">+</label>
+        <input type="radio" id="operation_sub" name="operation" value="-">
+        <label for="operation_sub">-</label>
+        <input type="radio" id="operation_mul" name="operation" value="*">
+        <label class="task5_label" for="operation_add">*</label>
+        <input type="radio" id="operation_div" name="operation" value="/">
+        <label for="operation_sub">/</label>
+
+
+        <input type="submit" value="Вычислить">
+
+        </fieldset>
+    </form>
+
+    {% if message %}
+        <div class="info">
+            <a class="info">{{message}}</a>
+        </div>
+    {% endif %}
+
+{% endblock %}

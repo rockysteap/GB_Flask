@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Seminar02 / {% block title %}{{title}}{% endblock %}</title>
+</head>
+<body>
+    <div class>
+        <h2>{{data.1.name}}</h2>
+        <p>{{data.1.desc}}</p>
+        {% block url1 %}
+        <a href="{{ url_for('task01') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task1 %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.2.name}}</h2>
+        <p>{{data.2.desc}}</p>
+        {% block url2 %}
+        <a href="{{ url_for('task02') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task2 %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.3.name}}</h2>
+        <p>{{data.3.desc}}</p>
+        {% block url3 %}
+        <a href="{{ url_for('task03') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task3 %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.4.name}}</h2>
+        <p>{{data.4.desc}}</p>
+        {% block url4 %}
+        <a href="{{ url_for('task04') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task4 %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.5.name}}</h2>
+        <p>{{data.5.desc}}</p>
+        {% block url5 %}
+        <a href="{{ url_for('task05') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task5 %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.6.name}}</h2>
+        <p>{{data.6.desc}}</p>
+        {% block url6 %}
+        <a href="{{ url_for('task06') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task6 %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.7.name}}</h2>
+        <p>{{data.7.desc}}</p>
+        {% block url7 %}
+        <a href="{{ url_for('task07') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task7 %}
+        {% endblock %}
+        {% block task7_redirected %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.8.name}}</h2>
+        <p>{{data.8.desc}}</p>
+        {% block url8 %}
+        <a href="{{ url_for('task08') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task8 %}
+        {% endblock %}
+        {% block task8_redirected %}
+        {% endblock %}
+
+    <div class>
+        <h2>{{data.9.name}}</h2>
+        <p>{{data.9.desc}}</p>
+        {% block url9 %}
+        <a href="{{ url_for('task09') }}">Нажми меня</a>
+        {% endblock %}
+    </div>
+        {% block task9 %}
+        {% endblock %}
+</body>
+</html>

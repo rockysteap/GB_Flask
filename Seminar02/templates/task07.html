@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block url7 %}
+<a href="{{ url_for('index') }}">Нажми меня</a>
+{% endblock %}
+
+{% block task7 %}
+    <form method="post">
+        <label>Число:</label>
+        <input type="number" step="0.0000000001" name="num" placeholder="Введите число">
+        <input type="submit" value="Отправить">
+    </form>
+
+    {% if message %}
+        <div class="info">
+            <a class="info">{{message}}</a>
+        </div>
+    {% endif %}
+
+{% endblock %}

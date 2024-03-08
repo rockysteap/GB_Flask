@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block url7 %}
+<a href="{{ url_for('index') }}">Нажми меня</a>
+{% endblock %}
+
+{% block task7_redirected %}
+
+    {% if message %}
+        <div class="info">
+            <a class="info">Расчет произведен после редиректа в функции task07_redirected()</a> <br>
+            <a class="info">{{message}}</a>
+        </div>
+    {% endif %}
+
+{% endblock %}

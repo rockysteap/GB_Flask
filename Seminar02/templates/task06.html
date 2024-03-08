@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block url6 %}
+<a href="{{ url_for('index') }}">Нажми меня</a>
+{% endblock %}
+
+{% block task6 %}
+    <form method="post">
+        <label>Имя:</label>
+        <input type="text" name="name" placeholder="Введите имя">
+        <label>Возраст:</label>
+        <input type="number" name="age" placeholder="Введите возраст">
+        <input type="submit" value="Отправить">
+    </form>
+
+    {% if message %}
+        <div class="info">
+            <a class="info">{{message}}</a>
+        </div>
+    {% endif %}
+
+{% endblock %}

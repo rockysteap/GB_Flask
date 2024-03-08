@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block url4 %}
+<a href="{{ url_for('index') }}">Нажми меня</a>
+{% endblock %}
+
+{% block task4 %}
+    <form method="post">
+        <textarea name="text" placeholder="Введите текст:" rows="5" cols="30"></textarea>
+        <input type="submit" value="Отправить">
+    </form>
+
+    {% if message %}
+        <div class="info">
+            <a class="info">{{message}}</a>
+        </div>
+    {% endif %}
+
+{% endblock %}

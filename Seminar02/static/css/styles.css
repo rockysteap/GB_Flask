@@ -1,0 +1,39 @@
+body{
+    font-family: 'Cambria', 'New Times Roman';
+    background-color: #6b6b6b;
+}
+div{
+    background-color: #9ca8a9;
+}
+div a{
+    font-weight: 900;
+    font-size: 20px;
+}
+form{
+    background-color: #b76f88;
+    line-height: 42px;
+    padding-top: 10px;
+}
+.info{
+    background-color: #b76f88;
+    line-height: 42px;
+}
+#task2_image{
+    width: 250px;
+}
+#task05_operations label{
+    margin-top: -1px;
+    vertical-align: middle;
+}
+.alert{
+    background-color: #b76f88;
+    line-height: 42px;
+    font-weight: 900;
+    font-size: 20px;
+}
+.alert.success {
+  background-color: green;
+}
+.alert.error {
+  background-color: red;
+}

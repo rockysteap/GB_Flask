@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<!-- Общий контейнер -->
+<div class="container d-flex justify-content-center">
+        {% set username = request.cookies.get('username') %}
+        {% if not username %}
+        <!-- Обработчик в случае отсутствия куки-файлов -->
+        <div class="row">
+            <div class="fw-bold text-center mt-5">Здравствуйте!</div>
+            <!-- Вызов модального блока -->
+            <button class="btn btn-primary mt-3"
+                    data-bs-toggle="modal" data-bs-target="#modal">Вход</button>
+            <a class="btn btn-secondary mt-1 disabled">Выход</a>
+        </div>
+        {% else %}
+        {% set email = request.cookies.get('email') %}
+        <div class="row">
+            <div class="fw-bold text-center mt-5">Добро пожаловать, {{username}}!</div>
+            <div class="text-center">Вы вошли с адресом '{{email}}'.</div>
+            <button class="btn btn-primary mt-3 disabled">Вход</button>
+            <a href="{{ url_for('logout') }}" class="btn btn-secondary mt-1">Выход</a>
+        </div>
+        {% endif %}
+
+    <!-- Модальный блок с формой -->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <form class="form_auth_style" action="#" method="post">
+                <div class="modal-header">
+                    <div class="">Введите данные:</div>
+                    <button class="btn-close" data-bs-dismiss="modal" data-bs-target="#modal"></button>
+                </div>
+                <div class="modal-body bg-info-subtle">
+                        <div class="form-floating p-1">
+                            <input type="text" id="name" name="auth_username"
+                                   class="form-control" placeholder="Введите имя:"/>
+                            <label for="name" class="form-label">Имя:</label>
+                        </div>
+                        <div class="form-floating p-1">
+                            <input type="email" id="email" name="auth_email"
+                                   class="form-control" placeholder="Введите почту:"/>
+                            <label for="email" class="form-label">Email:</label>
+                        </div>
+                </div>
+                <div class="model-footer">
+                    <div class="d-flex p-1 justify-content-center">
+                        <input type="submit" class="btn btn-primary" value="Войти">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

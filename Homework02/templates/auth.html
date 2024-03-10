@@ -18,6 +18,7 @@
         </div>
         {% else %}
         {% set email = request.cookies.get('email') %}
+        <!-- Обработчик в случае отсутствия куки-файлов -->
         <div class="row">
             <div class="fw-bold text-center mt-5">Добро пожаловать, {{username}}!</div>
             <div class="text-center">Вы вошли с адресом '{{email}}'.</div>

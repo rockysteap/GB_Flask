@@ -1,4 +1,4 @@
-from Lection03.app_console import app
+from app_console import app
 
 
 if __name__ == "__main__":

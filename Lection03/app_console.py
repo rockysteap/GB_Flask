@@ -1,5 +1,5 @@
 from flask import Flask
-from Lection03.models import db, User, Post
+from models import db, User, Post
 
 app = Flask(__name__)
 

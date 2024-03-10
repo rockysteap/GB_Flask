@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Путь к БД в случае запуска команд из консоли (на одном уровне с файлом wsgi.py)
 # 'sqlite:///mydb.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydb.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lection03.db'
 
 # Путь к БД при обращении из файла (запуск из app_run.py)
 # '../' -> выйти из instance директории урока,

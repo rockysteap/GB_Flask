@@ -13,7 +13,7 @@ app = Flask(__name__)
 # '../' -> выйти из instance директории урока,
 # '../' -> выйти из директории урока в корень проекта
 # 'instance/' -> зайти в директорию instance в корне проекта)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../../instance/mydb.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../../instance/lection03.db'
 
 db.init_app(app)
 

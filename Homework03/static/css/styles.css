@@ -1,0 +1,9 @@
+.alert.success {
+  background-color: green;
+}
+.alert.error {
+  background-color: red;
+}
+.row{
+   max-width: 350px;
+}

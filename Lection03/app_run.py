@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 
 from flask import Flask, render_template, jsonify
-from Lection03.models import db, User, Post
+from models import db, User, Post
 
 app = Flask(__name__)
 
